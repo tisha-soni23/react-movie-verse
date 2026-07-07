@@ -103,7 +103,7 @@ function MovieSlider({title,movies,subtitle="",id}){
                                             {  movie.release_date?.substring(0,4)}
                                          </span>   
                                     </div>
-                                    <button className= "text-white p-0 md:p-2.5  w-30 md:w-full bg-pink-500 flex pr-2  rounded font-medium" onClick={()=>handleMovieclick(movie)}>
+                                    <button className= "text-white p-0 md:p-2.5 text-sm  w-20 md:w-full bg-pink-500 flex pr-2  rounded md:font-medium" onClick={()=>handleMovieclick(movie)}>
                                             <svg  xmlns="http://www.w3.org/2000/svg" 
                                                   width="16" height="16" viewBox="0 0 24 24"
                                                   stroke="#fff" strokeWidth="0.5" fill="none"
