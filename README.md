@@ -5,7 +5,7 @@ A responsive movie discovery web application built with **React**, **Tailwind CS
 ## ✨ Features
 
 * 🔍 Search for movies
-* 🎬 Browse trending and popular movies
+* 🎬 Browse trending and popular movies and genre
 * 📄 View detailed movie information
 * 📱 Fully responsive design
 * ⚡ Fast and interactive user interface
@@ -24,13 +24,13 @@ A responsive movie discovery web application built with **React**, **Tailwind CS
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/movie-explorer.git
+git clone https://github.com/YOUR_GITHUB_USERNAME/react-movie-verse.git
 ```
 
 Navigate to the project directory:
 
 ```bash
-cd movie-explorer
+cd react-movie-verse
 ```
 
 Install dependencies:
@@ -46,10 +46,10 @@ npm run dev
 ```
 
 ### 📸 Preview
-![hero-section](./assets/herosectionimg.png)
-![details](./assets/details.png)
-![Movie slider](./assets/sliderimg.png)
-![genre](./assets/genreimg.png)
+![hero-section](.src/assets/herosectionimg.png)
+![details](.src/assets/details.png)
+![Movie slider](.src/assets/sliderimg.png)
+![genre](.src/assets/genreimg.png)
 
 ## 📚 What I Learned
 
