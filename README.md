@@ -46,10 +46,10 @@ npm run dev
 ```
 
 ### 📸 Preview
-![hero-section](.src/assets/herosectionimg.png)
-![details](.src/assets/details.png)
-![Movie slider](.src/assets/sliderimg.png)
-![genre](.src/assets/genreimg.png)
+![hero-section](./src/assets/herosectionimg.png)
+![details](./src/assets/details.png)
+![Movie slider](./src/assets/sliderimg.png)
+![genre](./src/assets/genreimg.png)
 
 ## 📚 What I Learned
 
