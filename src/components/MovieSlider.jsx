@@ -34,7 +34,7 @@ function MovieSlider({title,movies,subtitle="",id}){
     
     return(
        <section className="py-11" id={id}>
-        <div className="container mx-auto">
+        <div className="container mx-auto p-5">
             <div className="flex justify-between items-center mb-7 " >
                 <div className="text-white font-bold text-2xl md:text-3xl">
                     <h1 >{title}</h1>
@@ -75,7 +75,7 @@ function MovieSlider({title,movies,subtitle="",id}){
                          onClick={()=>handleMovieclick(movie.id)}
 
                         className="rounded-lg overflow-hidden bg-neutral-800">
-                            <div className="relative aspect-3/4 h-70 md:h-80">
+                            <div className="relative md:aspect-3/4 h-70 md:h-80">
                             <img 
                             src={getimgUrl(movie.backdrop_path)} alt={movie.title} 
                             className="w-full h-full object-cover transition-all duration-300
@@ -103,7 +103,7 @@ function MovieSlider({title,movies,subtitle="",id}){
                                             {  movie.release_date?.substring(0,4)}
                                          </span>   
                                     </div>
-                                    <button className= "text-white p-0 md:p-2.5  w-40 md:w-full bg-pink-500 flex pr-2  rounded font-medium" onClick={()=>handleMovieclick(movie)}>
+                                    <button className= "text-white p-0 md:p-2.5  w-30 md:w-full bg-pink-500 flex pr-2  rounded font-medium" onClick={()=>handleMovieclick(movie)}>
                                             <svg  xmlns="http://www.w3.org/2000/svg" 
                                                   width="16" height="16" viewBox="0 0 24 24"
                                                   stroke="#fff" strokeWidth="0.5" fill="none"
@@ -112,7 +112,7 @@ function MovieSlider({title,movies,subtitle="",id}){
                                                   <circle cx="12" cy="12" r="10" fill="white"/>
                                                   <path d="M9 9.003a1 1 0 0 1 1.517-.859l4.997 2.997a1 1 0 0 1 0 1.718l-4.997 2.997A1 1 0 0 1 9 14.996z"  fill="#f6339a" />
                                             </svg>
-                                                <p className="md:mt-1 md:pr-2 ml-2 mt-1"> View Details</p>
+                                                <p className="md:mt-1 md:pr-2 ml-2  mt-1"> View Details</p>
                                     </button>
                                     </div>
                                 </div>
@@ -133,7 +133,7 @@ function MovieSlider({title,movies,subtitle="",id}){
                                         d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/>
                                 </svg> 
                                 <span className="text-white text-xs">{formatrating(movie.vote_average)}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <span className="text-neutral-400 text-xs md:ml-34 ml-80">{  movie.release_date?.substring(0,4)} </span>
+                                <span className="text-neutral-400 text-xs hidden md:block md:ml-34 ml-80">{  movie.release_date?.substring(0,4)} </span>
 
                             </div>
                         </div>
