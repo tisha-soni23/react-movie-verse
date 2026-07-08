@@ -72,7 +72,7 @@ function MovieDetails({onclose,movieid}){
     return(
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-neutral-900/95 backdrop-blur-sm overflow-auto ">
          <div className="relative w-full max-w-5xl bg-neutral-800 rounded-lg shadow-xl h-screen overflow-y-auto scrollbar-thin scrollbar-thumb-neutral-700 scrollbar-track-neutral-900">
-                <button className="absolute top-4 right-4 z-10 p-2 rounded-full bg-neutral-700/80 text-white hover:bg-neutral-600/80 transition-all" onClick={onclose}>
+                <button className="absolute top-10 right-4 z-10 p-2 rounded-full bg-neutral-700/80 text-white hover:bg-neutral-600/80 transition-all" onClick={onclose}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
                         strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-x-icon lucide-x">
                         <path d="M18 6 6 18"/><path d="m6 6 12 12"/>
