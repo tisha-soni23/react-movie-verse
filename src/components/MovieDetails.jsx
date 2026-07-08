@@ -187,7 +187,7 @@ function MovieDetails({onclose,movieid}){
                                             
                                                 <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
                                                     <button
-                                                            className="absolute top-40 right-99 text-white text-xl"
+                                                            className="absolute top-20 right-50 text-white text-xl"
                                                             onClick={() => setTrailerkey(null)}
                                                         >
                                                             ✕
