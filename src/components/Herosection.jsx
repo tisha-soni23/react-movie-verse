@@ -117,7 +117,7 @@ function Herosection(){
                                             
                                                 <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
                                                     <button
-                                                            className="absolute md:top-47 md:right-110 top-10  text-white text-xl"
+                                                            className="absolute md:top-21 md:right-100 top-20 right-1  text-white text-xl"
                                                             onClick={() => setTrailerkey(null)}
                                                         >
                                                             ✕
