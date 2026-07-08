@@ -103,7 +103,7 @@ function MovieSlider({title,movies,subtitle="",id}){
                                             {  movie.release_date?.substring(0,4)}
                                          </span>   
                                     </div>
-                                    <button className= "text-white px-3 py-2 text-sm w-full bg-pink-500 flex pr-2  rounded md:font-medium justify-center md:justify-start" onClick={()=>handleMovieclick(movie)}>
+                                    <button className= "text-white px-3 py-2 text-sm w-full bg-pink-500 flex pr-2  rounded md:font-medium justify-center md:justify-center" onClick={()=>handleMovieclick(movie)}>
                                             <svg  xmlns="http://www.w3.org/2000/svg" 
                                                   width="16" height="16" viewBox="0 0 24 24"
                                                   stroke="#fff" strokeWidth="0.5" fill="none"
@@ -112,7 +112,7 @@ function MovieSlider({title,movies,subtitle="",id}){
                                                   <circle cx="12" cy="12" r="10" fill="white"/>
                                                   <path d="M9 9.003a1 1 0 0 1 1.517-.859l4.997 2.997a1 1 0 0 1 0 1.718l-4.997 2.997A1 1 0 0 1 9 14.996z"  fill="#f6339a" />
                                             </svg>
-                                                <p className="md:mt-1 md:pr-2 ml-2 mb-0.6"> View Details</p>
+                                                <p className="md:mt-1 md:pr-2 ml-2 mb-0.6 text-center"> View Details</p>
                                     </button>
                                     </div>
                                 </div>
