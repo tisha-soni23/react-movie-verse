@@ -18,7 +18,7 @@ function Moviecontent(){
         <>
         <Herosection/>
         <div className="bg-linear-to-b from-neutral-900 to-neutral-950">
-            <MovieSlider title="Trending this week" subtitle="Stay updated with what everyone's wathin"
+            <MovieSlider title="Trending this week" subtitle="Stay updated with what everyone's watchin"
              movies={trendingMovies} id="trending" ></MovieSlider>
               <MovieSlider title="Popular Movies" subtitle="Most watched movies right now"
              movies={popularMovies} id="popular" ></MovieSlider>
