@@ -11,7 +11,6 @@ function Navbar() {
         const [result,setResult]=useState([]);
         const [isloading,setIsloading]=useState(false);
         const [showDropdown,setShowDropdown]=useState(false);
-        const [searched,setSearched]=useState(false);
         const searchRef=useRef(null);
         const mobileSearchRef = useRef(null);
         const debounceTimer=useRef(null);
@@ -52,19 +51,17 @@ function Navbar() {
         if (!q.trim() || q.trim().length <= 2) {//checks is query is empty and length is <2
             setResult([]);
             setShowDropdown(false);
-            setSearched(false);
             return;
         }
 
         setIsloading(true);
         setShowDropdown(true);
-        setSearched(false);               //q-why false
 
         try {
-            const data = await SearchMovies(q);//get movies from api
+            const data = await SearchMovies(q);
             setResult(data?.slice(0, 6) || []);
         } catch {
-            setResult([]); //if error than serach result empty
+            setResult([]); 
         } finally {
             setIsloading(false);
             
@@ -82,7 +79,7 @@ function Navbar() {
 
     
     return (
-        <header className= {` fixed top-0 left-0 right-0 flex flex-col backdrop-blur-3xl 
+        <header className= {`fixed top-0 left-0 right-0 flex flex-col backdrop-blur-3xl 
         md:backdrop-blur-none justify-center items-center w-full z-50 transition-all duration-300 
         ${isScrolled ?"bg-neutral-900/95 backdrop-blur-md shadow-lg":"bg-transparent"}`}>
             <div className="container flex justify-between md:mx-auto p-2.5">
@@ -117,17 +114,21 @@ function Navbar() {
                         />
                         
                         <div className="absolute right-2 top-2">
-                            {isloading ?( <svg  className="absolute right-1 -z-1 animate-spin"
-                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" 
-                            strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" color="white" >
-                                <path d="M21 12a9 9 0 1 1-6.219-8.56" />
-                            </svg>):(<svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg"
-                             width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
-                             strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" color="white">
-                                <path d="m21 21-4.34-4.34" />
-                                <circle cx="11" cy="11" r="8" />
-                            </svg>)}
+                            {isloading ?(
+                                <svg  className="absolute right-1 -z-1 animate-spin"
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+                                strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" color="white" >
+                                    <path d="M21 12a9 9 0 1 1-6.219-8.56" />
+                                </svg>
+                                ):(
+                                <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+                                strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" color="white">
+                                    <path d="m21 21-4.34-4.34" />
+                                    <circle cx="11" cy="11" r="8" />
+                                </svg>
+                            )}
                            
                             
                         </div>

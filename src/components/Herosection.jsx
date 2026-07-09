@@ -5,13 +5,10 @@ import { getimgUrl,fetchMovieVideos } from "../Services/api";
 function Herosection(){
             const {trendingMovies,loading}=useMovies();
             const [trailerkey,setTrailerkey]=useState();
-           
-        
             const featureMovies=trendingMovies.slice(0,5);
             const [currentSlide,setCurrentSlide]=useState(0);
             const [isTransition,setIsTransition]=useState(false);
           
-            
             useEffect(()=>{
                 if (loading || featureMovies.length === 0) return;
                 const interval=setInterval(()=>{
@@ -46,10 +43,12 @@ function Herosection(){
                 
             }
             const currentMovie=featureMovies[currentSlide];
+            
             const formatrating=(rating)=>{
                 
                 return (Math.round(rating*10)/10).toFixed(1);
             }
+
             const handleWatchNow = async (movieId) => {
             const videos = await fetchMovieVideos(movieId);
             const trailer = videos.find(v => v.type === "Trailer" && v.site === "YouTube");
@@ -57,7 +56,6 @@ function Herosection(){
                 setTrailerkey(trailer.key);
             } else {
                 alert("No trailer available for this movie."); 
-                // or better: a toast notification / inline message instead of alert
             }
             };
         
@@ -83,7 +81,7 @@ function Herosection(){
                             <div className="transition-all duration-700">
                                 <div className=" flex items-center space-x-3 mb-4 ">
                                     <span className="text-white rounded bg-pink-500 pr-1 pl-1">Featured</span>
-                                    {currentMovie.vote_average >0 && //why we use conditional rendering here we can aslo use normally
+                                    {currentMovie.vote_average >0 && 
                                     ( <div className="flex items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" 
                                             width="16" height="16" viewBox="0 0 24 24" 
@@ -99,7 +97,6 @@ function Herosection(){
                                         <span className="text-white">{currentMovie.release_date?.substring(0,4)}</span>
                                     
                                         {currentMovie.adult && (
-                                            //why we used extra node here
                                             <> 
                                                 <span className="text-white">.</span>
                                                 <span className="text-white bg-neutral-700 w-38 text-center">18+</span>

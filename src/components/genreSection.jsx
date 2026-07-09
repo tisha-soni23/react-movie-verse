@@ -83,7 +83,7 @@ function GenreSection({id}){
                         <div className="relative overflow-hidden  rounded-lg  bg-neutral-800">
                             <div className=" md:aspect-2/3   ">
                             <img
-                            src={getimgUrl(movie.poster_path)} alt={movie.title} className="  w-full h-full object-cover transition-all duration-300
+                            src={getimgUrl(movie.poster_path)} alt={movie.title} className="w-full h-full object-cover transition-all duration-300
                             group-hover:scale-110 group-hover:opacity-50" />
                             <div className="absolute inset-0 bg-linear-to-t from-neutral-900/90 via-neutral-900/90 to-transparent opacity-0
                             group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-4">

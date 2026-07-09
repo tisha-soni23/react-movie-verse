@@ -7,9 +7,8 @@ function MovieSlider({title,movies,subtitle="",id}){
             const [isScrolling,setIsScrolling]=useState(false);
             const [hoverMovieid,setHoverMovieid]=useState(null);
             const { openMovieDetails } = useMovies();
-            
             const sildeRef=useRef(null);
-
+            
             const scroll=(direction)=>{
                 if(isScrolling) return;
                 const {current}=sildeRef;
@@ -57,7 +56,7 @@ function MovieSlider({title,movies,subtitle="",id}){
                             width="35" height="35" viewBox="0 0 24 24" 
                             fill="none" stroke="currentColor" strokeWidth="2" 
                             strokeLinecap="round" strokeLinejoin="round" 
-                            className="lucide lucide-circle-chevron-right-icon lucide-circle-chevron-right "color="white">
+                            className="lucide lucide-circle-chevron-right-icon lucide-circle-chevron-right"color="white">
                             <circle cx="12" cy="12" r="10"  color="#1f1f1f"/>
                             <path d="m10 8 4 4-4 4" color="white"/>
                         </svg>

@@ -3,12 +3,9 @@ import { fetchMoviesDetails, fetchMovieVideos, getimgUrl } from "../Services/api
 import { useMovies } from "../context/Moviecontext";
 
 function MovieDetails({onclose,movieid}){
-     console.log("MovieDetails rendered with movieid:", movieid);
             const {genre}=useMovies();
             const [trailerkey,setTrailerkey]=useState();
-        
             const [movie,setMovie]=useState(null);
-           
             const [isloading,setIsloading]=useState(true);
             const [error,setError]=useState(null);
 
@@ -18,7 +15,6 @@ function MovieDetails({onclose,movieid}){
                         setIsloading(true);
                         const data=await fetchMoviesDetails(movieid);
                         setMovie(data);
-                         console.log(data);
                         setError(null);
                     }
                     catch(err){
