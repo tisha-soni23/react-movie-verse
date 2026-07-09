@@ -18,7 +18,6 @@ function MovieDetails({onclose,movieid}){
                         setError(null);
                     }
                     catch(err){
-                        console.log("Failed to load movie details.");
                         setError("Failed to load movie details.");
                     }
                     finally{
